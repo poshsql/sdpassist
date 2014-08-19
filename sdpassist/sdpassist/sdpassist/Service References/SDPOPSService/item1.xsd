@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8080/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/sdpopsservice" />
+  <xs:element name="setOwner">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="env" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sdpid" type="xs:int" />
+        <xs:element minOccurs="0" name="empalias" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setOwnerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="setOwnerResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="searchSdpbyTam">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="env" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tam" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="searchSdpbyTamResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/sdpopsservice" minOccurs="0" name="searchSdpbyTamResult" nillable="true" type="q1:ArrayOfSdp" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="searchSdpbyName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="env" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="searchSdpbyNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/sdpopsservice" minOccurs="0" name="searchSdpbyNameResult" nillable="true" type="q2:ArrayOfSdp" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllOpsStaff">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAllOpsStaffResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/sdpopsservice" minOccurs="0" name="getAllOpsStaffResult" nillable="true" type="q3:ArrayOfOPSStaff" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
